@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table</title>
+    <style>
+      .div {
+       
+        width: 750px;
+        height: 600px;
+       
+        border: inset;
+        border-width: 40px;
+        animation-name: change;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+      .table {
+        font-size: 50px;
+        border: outset;
+        border-width: 20px;
+        border-color: red;
+        margin-top: 120px;
+        margin-left: 150px;
+        padding: 40px;
+        animation-name: rotate;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+
+      @keyframes rotate {
+        from {
+          border: inset;
+          border-width: 20px;
+          transform: rotate(0deg);
+          border-color: rgb(12, 21, 183);
+        }
+        to {
+          border: outset;
+          border-width: 10px;
+          transform: rotate(360deg);
+          border-color: rgb(234, 126, 18);
+        }
+      }
+
+      @keyframes change {
+        from {
+          border: inset;
+          border-width: 20px;
+          border-color: red;
+        }
+        to {
+          border: outset;
+          border-width: 10px;
+          border-color: violet;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div">
+      <table border="2" class="table">
+        <tr>
+          <td>data</td>
+          <td>data</td>
+          <td>data</td>
+          <td>data</td>
+        </tr>
+        <tr>
+          <td>data</td>
+          <td>data</td>
+          <td>data</td>
+          <td>data</td>
+        </tr>
+        <tr>
+          <td>data</td>
+          <td>data</td>
+          <td>data</td>
+          <td>data</td>
+        </tr>
+        <tr>
+          <td>data</td>
+          <td>data</td>
+          <td>data</td>
+          <td>data</td>
+        </tr>
+      </table>
+    </div>
+    <div style="background-color: red; width: 10px; height:10px;">
+      <div style="background-color: black;  width: 5px; height:5px; align-items: center;">
+
+      </div>
+    </div>
+  </body>
+</html>

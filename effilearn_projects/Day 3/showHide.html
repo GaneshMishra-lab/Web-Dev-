@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TextDisplay</title>
+
+    <style>
+        body {
+            
+            margin: 0px;
+            padding: 0px;
+            border-width:0px ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            background-image: url(counterbgimg.jpg);
+        }
+
+        .outerone {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: inset;
+            border-color: rgb(42, 20, 201);
+            border-width: 10px;
+            border-radius: 10px;
+            background-color: aliceblue;
+            height: 200px;
+            width: 400px;
+            background: #160345;
+        }
+
+        #h{
+            color: wheat;
+            margin-right: 70px;
+            margin-top: 50px;
+
+        }
+
+        #bt {
+            background: #2c14c9;
+            background-image: -webkit-linear-gradient(top, #2c14c9, #2980b9);
+            background-image: -moz-linear-gradient(top, #2c14c9, #2980b9);
+            background-image: -ms-linear-gradient(top, #2c14c9, #2980b9);
+            background-image: -o-linear-gradient(top, #2c14c9, #2980b9);
+            background-image: linear-gradient(to bottom, #2c14c9, #2980b9);
+            -webkit-border-radius: 28;
+            -moz-border-radius: 28;
+            border-radius: 28px;
+            font-family: Arial;
+            color:wheat;
+            font-size: 20px;
+            padding: 10px 20px 10px 20px;
+            text-decoration: none;
+            margin-left: 5px;
+            margin-right: 5px;
+            margin-top: 30px;
+        }
+
+        #bt:hover {
+            background: #2c14c9;
+            background-image: -webkit-linear-gradient(top, #2c14c9, #3498db);
+            background-image: -moz-linear-gradient(top, #2c14c9, #3498db);
+            background-image: -ms-linear-gradient(top, #2c14c9, #3498db);
+            background-image: -o-linear-gradient(top, #2c14c9, #3498db);
+            background-image: linear-gradient(to bottom, #2c14c9, #3498db);
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outerone">
+        <h1 id="h"> Hide This !! </h1>
+        <br><br>
+        <button id="bt" onclick="hide()">Hide</button>
+    </div>
+
+    <script>
+        let visible = true
+
+        function hide() {
+
+            if (visible) {
+                visible = false
+            }
+            else {
+                visible = true
+            }
+
+            if (!visible) {
+                document.getElementById("bt").innerHTML = "Show"
+                document.getElementById("h").style.display = "none"
+            }
+            else {
+                document.getElementById("bt").innerHTML = "Hide"
+                document.getElementById("h").style.display = "block"
+            }
+
+
+
+
+        }
+    </script>
+
+</body>
+
+</html>

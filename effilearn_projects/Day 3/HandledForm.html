@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Forum</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            margin: 0px;
+            padding: 0px;
+            border-width:0px ;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            background-image: url(HandledFormimg.jpg);
+        }
+
+        .formcontainer {
+
+            background-color: rgb(221, 164, 111);
+            color: rgb(15, 12, 8);
+            border: inset;
+            border-width: 10px;
+            border-color: rgb(186, 112, 66);
+            border-radius: 10px;
+
+
+        }
+
+        .form {
+            margin: 50px;
+
+        }
+
+        .input {
+            outline: 0;
+            color: #000000;
+            font-size: 14px;
+            padding: 8px 10px;
+            width: auto;
+            border-radius: 18px;
+            border: 1px solid #d6d6d6;
+            background-color: #eeeae7;
+        }
+
+        .input:active,
+        .input:focus {
+            background-color: #ffffff;
+            color: #000000;
+            border: 1px solid #969696;
+        }
+
+        .buttons{
+            
+            margin-left: 45px;
+            outline: 0;
+            color: #000000;
+            font-size: 14px;
+            padding: 8px 10px;
+            width: auto;
+            border-radius: 18px;
+            border: 1px solid #d6d6d6;
+            background-color: #eeeae7;            
+        }
+
+        .buttons:hover{
+            border: 1px solid #474343;
+            background-color: #e3d1be; 
+
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="formcontainer">
+        <form class="form" action="" onsubmit="handelSubmit()">
+            <label for="usrname">Username:</label>
+            <input  class="input" type="text" id="usrname" required>
+
+            <br> <br>
+
+            <label for="email">Email Id:</label>
+            <input class="input"  type="email" id="email" required>
+
+            <br> <br>
+
+            <label for="no">Mobile No.:</label>
+            <input  class="input" type="number" id="no" required>
+
+            <br> <br>
+
+            <label for="role">Role:</label>
+            <select class="input" id="role">
+                <option value="nun">--Select your role--</option>
+                <option value="Pen Tester">Pen Tester</option>
+                <option value="SOC Analyst">SOC Analyst</option>
+            </select>
+
+            <br> <br>
+
+            <label for="passwd"> Password: </label>
+            <input class="input" type="text" id="passwd" required>
+
+            <br> <br>
+
+            <button   class="buttons" type="submit">Submit</button>
+            <button  class="buttons" type="reset">Reset</button>
+        </form>
+
+        <script>
+
+
+            function handelSubmit() {
+                let name = document.getElementById("usrname").value
+                let email = document.getElementById("email").value
+                let num = document.getElementById("no").value
+                let pass = document.getElementById("passwd").value
+                let role = document.getElementById("role").value
+
+                if (role == "nun") {
+                    alert("enter your role")
+
+                }
+                else {
+                    alert("name:" + name + " \n " + "Email:" + email + " \n " + "Number:" + num + "\n" + "Password:" + pass + "\n" + "Role:" + role)
+                }
+
+
+
+
+            }
+
+        </script>
+    </div>
+
+</body>
+
+</html>

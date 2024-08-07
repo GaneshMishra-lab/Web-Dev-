@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .custom_input {
+        display: flex;
+        align-items: center;
+        position: relative;
+        max-width: 100%;
+        left: 20%;
+      }
+
+      .input {
+        font-size: 18px;
+        padding: 5px 10px;
+        padding-left: 35px;
+
+        outline: none;
+        background: #ffffff;
+        color: #000000;
+        border: 1px solid #c4d1eb;
+        border-radius: 5px;
+        box-shadow: 3px 3px 2px 0px #e2e2e2;
+        transition: 0.3s ease;
+      }
+
+      .input:focus {
+        background: #f2f2f2;
+        border: 1px solid #5a7ec7;
+        border-radius: 10px;
+      }
+
+      .input::placeholder {
+        color: #dddddd;
+      }
+
+      .svg_icon {
+        position: absolute;
+        left: 10px;
+        fill: #4660dc;
+        width: 18px;
+        height: 18px;
+      }
+
+      .Formcontainer {
+        border: solid;
+        border-width: 20px;
+        padding: 20px;
+        position: relative;
+        left: 25%;
+        margin-top: 100px;
+        margin-left: 60px;
+        width: 500px;
+        animation: bor 1s linear 0s infinite alternate none;
+      }
+
+      @keyframes bor {
+        from{border-color: rgb(255, 187, 0);}
+        to{border-color: rgb(0, 255, 200);}
+        
+      }
+
+      .label {
+        font-size: 25px;
+        position: relative;
+        left: 30%;
+        top: 10px;
+      }
+
+      .myButton {
+        background-color: #3d94f6;
+        border-radius: 28px;
+        border: 1px solid #337fed;
+        display: inline-block;
+        cursor: pointer;
+        color: #ffffff;
+        font-family: Arial;
+        font-size: 17px;
+        padding: 16px 31px;
+        text-decoration: none;
+        text-shadow: 0px 1px 0px #1570cd;
+        margin-left: 113px;
+        margin-top: 20px;
+      }
+      .myButton:hover {
+        background-color: #1e62d0;
+      }
+      .myButton:active {
+        position: relative;
+        top: 1px;
+      }
+      .myButto {
+        background-color: #3d94f6;
+        border-radius: 28px;
+        border: 1px solid #337fed;
+        display: inline-block;
+        cursor: pointer;
+        color: #ffffff;
+        font-family: Arial;
+        font-size: 17px;
+        padding: 16px 31px;
+        text-decoration: none;
+        text-shadow: 0px 1px 0px #1570cd;
+
+        margin-top: 20px;
+      }
+      .myButto:hover {
+        background-color: #1e62d0;
+      }
+      .myButto:active {
+        position: relative;
+        top: 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <div class="Formcontainer">
+        <label class="label" for="usrname"> Username:</label>
+        <br /><br />
+        <div class="custom_input">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="svg_icon bi-record-circle"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+            ></path>
+            <path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"></path>
+          </svg>
+          <input
+            id="usrname"
+            class="input"
+            type="text"
+            placeholder="Enter Username"
+          />
+        </div>
+
+        <label class="label" for="email">Email:</label>
+        <br /><br />
+        <div class="custom_input">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="svg_icon bi-record-circle"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+            ></path>
+            <path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"></path>
+          </svg>
+          <input
+            id="email"
+            class="input"
+            type="Email"
+            placeholder="Enter Email"
+          />
+        </div>
+        <label class="label" for="pass"> Password:</label>
+        <br /><br />
+        <div class="custom_input">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="svg_icon bi-record-circle"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+            ></path>
+            <path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"></path>
+          </svg>
+          <input
+            id="pass"
+            class="input"
+            type="password"
+            placeholder="Enter Password"
+          />
+        </div>
+
+        <button class="myButton" type="submit">Submit</button>
+        <button class="myButto" type="reset">Reset</button>
+      </div>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+
+    <style>
+        body {
+
+            padding: 0px;
+            margin: 0px;
+            border: 0px;
+            overflow: hidden;
+        }
+
+        .MainScreen {
+            padding: 0px;
+            margin: 0px;
+            border: 0px;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+
+
+
+        }
+
+        .MainScreen img {
+
+            width: 100%;
+            height: 100%;
+        }
+
+
+
+
+
+
+        .btncontainer {
+            display: flex;
+            gap: 5px;
+            position: absolute;
+            top: 530px;
+            left: 600px;
+
+        }
+
+
+        .temp {
+            height: 0px;
+            width: 0px;
+        }
+
+        .QeueContainer {
+
+            display: flex;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            gap: 5px;
+            background-color: transparent;
+            height: 20vh;
+            position: absolute;
+            top: 400px;
+            left: 20px;
+            flex-direction: row;
+
+
+        }
+
+        .QeueContainer img {
+            height: auto;
+
+            border: solid;
+            border-radius: 5px;
+            border-color: aliceblue;
+        }
+
+        .QeueContainer::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="one" class="MainScreen">
+
+        <img id="0" src="Assets/gojo.webp" alt="">
+        <img id="nun" src="" alt="">
+
+
+        <div class="QeueContainer">
+
+
+
+
+            <img id="1" src="Assets/Ayanokoji.webp" alt="">
+            <img id="2" src="Assets/kakashi.jpg" alt="">
+            <img id="3" src="Assets/itachi 3.jpg" alt="">
+            <img id="4" src="Assets/Itachi 1.jpeg" alt="">
+            <img id="5" src="Assets/Itachi 2.jpeg" alt="">
+            <img id="6" src="Assets/Sasuke 1.jpg" alt="">
+            <img id="7" src="Assets/Sasuke 2.jpg" alt="">
+            <img id="8" src="Assets/boruto 3.jpg" alt="">
+            <img id="9" src="Assets/Boruto 1.jpg" alt="">
+            <img id="10" src="Assets/Boruto 2.jpg" alt="">
+            <img id="11" src="Assets/Minato 1.webp" alt="">
+            <img id="12" src="Assets/Minato 2.jpg" alt="">
+            <img id="13" src="Assets/Minato 3.jpg" alt="">
+            <img id="14" src="Assets/megumi 3.webp" alt="">
+            <img id="15" src="Assets/Megumi 1.webp" alt="">
+            <img id="16" src="Assets/Megumi 2.webp" alt="">
+            <img id="17" src="Assets/Megumi 4.jpg" alt="">
+
+
+
+
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="temp">
+
+    </div>
+
+    <div class="btncontainer">
+        <button onclick="change()">forward </button>
+
+        <button onclick="changeBack()">back</button>
+    </div>
+
+
+    <script>
+
+        function change() {
+
+            let num = 0
+
+
+
+
+            for (let i = 0; i < 17; i++) {
+
+
+                if (i == 0) {
+                    document.getElementById("nun").setAttribute("src", document.getElementById(i).getAttribute("src"))
+                }
+
+                document.getElementById(i).setAttribute("src", document.getElementById(i + 1).getAttribute("src"))
+
+
+
+
+
+            }
+
+            document.getElementById(17).setAttribute("src", document.getElementById("nun").getAttribute("src"))
+
+
+
+
+        }
+        
+        
+        function changeBack() {
+
+            for(let i=17 ; i>0 ; i--)
+            {
+                if(i== 17)
+                {
+                    document.getElementById("nun").setAttribute("src", document.getElementById(i).getAttribute("src"))
+                }
+
+                document.getElementById(i).setAttribute("src", document.getElementById(i - 1).getAttribute("src"))
+
+                
+            }
+
+            document.getElementById(0).setAttribute("src", document.getElementById("nun").getAttribute("src"))
+
+
+
+        }
+
+            
+           
+
+
+
+
+           
+
+
+    </script>
+
+
+
+</body>
+
+</html>
+
+
+
+
+<!-- 
+<img id="1" class="slide" src="Assets/Ayanokoji.webp" alt="">
+<img id="2" class="slide" src="Assets/kakashi.jpg" alt="">
+<img id="3" class="slide"src="Assets/itachi 3.jpg" alt="">
+<img id="4" class="slide"src="Assets/Itachi 1.jpeg" alt="">
+<img id="5" class="slide"src="Assets/Itachi 2.jpeg" alt="">
+<img id="6" class="slide"src="Assets/Sasuke 1.jpg" alt="">
+<img id="7" class="slide"src="Assets/Sasuke 2.jpg" alt="">
+<img id="8" class="slide"src="Assets/boruto 3.jpg" alt="">
+<img id="9" class="slide"src="Assets/Boruto 1.jpg" alt="">
+<img id="10"class="slide" src="Assets/Boruto 2.jpg" alt="">
+<img id="11"class="slide" src="Assets/Minato 1.webp" alt="">
+<img id="12"class="slide" src="Assets/Minato 2.jpg" alt="">
+<img id="13"class="slide" src="Assets/Minato 3.jpg" alt="">
+<img id="14"class="slide" src="Assets/megumi 3.webp" alt="">
+<img id="15"class="slide" src="Assets/Megumi 1.webp" alt="">
+<img id="16"class="slide" src="Assets/Megumi 2.webp" alt="">
+<img id="17"class="slide" src="Assets/Megumi 4.jpg" alt="">
+
+const slide = document.querySelectorAll
+
+slide[0]
+
+slide => (slide.forAll (slide.style.displai = "None";))
+slide [sideIndex]= slide.style.display = "block"; -->
